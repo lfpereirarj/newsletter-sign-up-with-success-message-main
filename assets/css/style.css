@@ -120,6 +120,11 @@ html, body, .newsletter, .page, .page-wrapper, .newsletter-inner {
     color: hsl(4, 100%, 67%);
     position: absolute;
     right: 0;
+    display: none;
+}
+
+.newsletter-form.error .error-message {
+    display: block;
 }
 
 .newsletter-form .form-control {
@@ -136,7 +141,7 @@ html, body, .newsletter, .page, .page-wrapper, .newsletter-inner {
     border: 1px solid hsl(231, 7%, 60%);
 }
 
-.newsletter-form .input.error {
+.newsletter-form.error .input {
     border-color: hsl(4, 100%, 67%);
 }
 
@@ -147,4 +152,30 @@ html, body, .newsletter, .page, .page-wrapper, .newsletter-inner {
     background-color: hsl(234, 29%, 20%);
     color: #fff;
     border-radius: 4px;
+}
+
+
+@media screen and (min-width: 1440px) {
+    .page-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .newsletter {
+        max-width: 800px;
+        max-height: 536px;
+        border-radius: 16px;
+        overflow: hidden;
+        padding: 16px;
+    }
+    .newsletter-inner {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 32px;
+    }
+
+    .newsletter-content p, .newsletter-content ul {
+        max-width: 100%;
+    }
 }
